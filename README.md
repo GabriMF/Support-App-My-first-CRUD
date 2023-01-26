@@ -1,6 +1,6 @@
 ## Support App My first CRUD
 
-Contexto del proyecto
+Contexto del proyecto:
 Desarrollar una plataforma para que los alumnos de F5 puedan enviar sus comentarios o incidencias del día a día.
 
 ​
