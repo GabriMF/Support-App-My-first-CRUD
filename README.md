@@ -7,45 +7,45 @@ Desarrollar una plataforma para que los alumnos de F5 puedan enviar sus comentar
 
 # Requisitos mínimos:
 
-- Página 1: Lista de las solicitudes
-- Página 2: Formulario para solicitar el soporte
-- Página 3: Edición de una solicitud
+- Página 1: Lista de las solicitudes.
+- Página 2: Formulario para solicitar el soporte.
+- Página 3: Edición de una solicitud.
 ​
 
 # Contenido de la solicitud:
 
-- Nombre del solicitante
-- Fecha de la solicitud
-- Tema de la consulta
-- Descripción de la consulta
+- Nombre del solicitante.
+- Fecha de la solicitud.
+- Tema de la consulta.
+- Descripción de la consulta.
 ​
  
 # Listado de las solicitudes:
 
-- Deben aparacer por orden de creación
+- Deben aparacer por orden de creación.
 ​
 
 # Nueva cita:
 
-- Todos los campos del formulario son obligatorios
+- Todos los campos del formulario son obligatorios.
 
-- Botón para resetear los campos
+- Botón para resetear los campos.
 
-- Botón para cancelar la creación y volver a la vista de la lista
+- Botón para cancelar la creación y volver a la vista de la lista.
 
-- Botón para validar la solicitud
+- Botón para validar la solicitud.
 
 ​
 
 - Edición de una solicitud ya registrada:
 
-- Todos los campos del formulario son obligatorios
+- Todos los campos del formulario son obligatorios.
 
-- Los campos deberán contener la información actual
+- Los campos deberán contener la información actual.
 
-- Botón de cancelar la edición
+- Botón de cancelar la edición.
 
-- Botón para enviar los cambios realizados
+- Botón para enviar los cambios realizados.
 
 ​
 
