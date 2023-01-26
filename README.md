@@ -52,13 +52,6 @@ Desarrollar una plataforma para que los alumnos de F5 puedan enviar sus comentar
 -La aplicación deberá ser totalmente responsive.
 
 
-
-## PARTES DEL PROYECTO
-
-### PROTOTIPADO
-
-### Home
-
 ### HERRAMIENTAS Y LENGUAJES UTILIZADOS
 
 - HTML
@@ -72,7 +65,7 @@ Desarrollar una plataforma para que los alumnos de F5 puedan enviar sus comentar
 ### Instalación:
  npm install
  
- 
+
  
  
 ### AUTORES:
