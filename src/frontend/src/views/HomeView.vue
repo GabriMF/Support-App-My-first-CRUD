@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Header from '../components/Header.vue';
+import textBox from '../components/textBox.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Header></Header>
+  <textBox/>
+  <Footer></Footer>
 </template>
+
+<style lang="scss" scoped>
+  
+</style>
