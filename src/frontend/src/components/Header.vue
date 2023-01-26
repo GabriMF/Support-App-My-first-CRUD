@@ -1,15 +1,5 @@
 <script setup>
 
-const props = defineProps ({
- name:{
-   type: String,
-   required: true,
- },
- typeButton:{
-   type: String,
-   default: 'like',
- }
-})
 </script>
 <template>
   <header id="header">
