@@ -15,6 +15,11 @@ let printDate = `${day}/${month}/${year}`
 
  document.getElementById("date").innerHTML = printDate;
 }
+
+function resetForm(){
+  console.log("enter the function");
+  document.getElementById("formGroupExampleInput").reset();
+}
 </script>
 
 <template>
@@ -22,30 +27,29 @@ let printDate = `${day}/${month}/${year}`
   <main>
     
     <h2>Your new incident</h2>
-<form>
-  <label for="date" id="date"></label>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name" required>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control form-control-lg" id="formGroupExampleInput2" placeholder="Write a subject" required>
-  </div>
+    <form>
+      <label for="date" id="date"></label>
+      
+      <div class="form-group">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name" required>
+      </div>
 
-  <div class="form-group">
-    <textarea class="form-control form-control-lg" id="formGroupExampleInput3" placeholder="Write your commentary" rows="3" required></textarea>
+      <div class="form-group">
+        <input type="text" class="form-control form-control-lg" id="formGroupExampleInput2" placeholder="Write a subject" required>
+      </div>
 
-  </div>
+      <div class="form-group">
+        <textarea class="form-control form-control-lg" id="formGroupExampleInput3" placeholder="Write your commentary" rows="3" required></textarea>
+      </div>
 
-  <div id="buttons-box">
-    <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
-    <button type="button" class="btn btn-warning" id="reset">Reset</button>
-    <button type="button" class="btn btn-success" id="send">Send</button>
-  </div>
+      <div id="buttons-box">
+        <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+        <button type="button" class="btn btn-warning" id="reset" v-on:click="resetForm()">Reset</button>
+        <button type="button" class="btn btn-success" id="send">Send</button>
+      </div>
 
-</form>
-</main>
+    </form>
+  </main>
 <Footer></Footer>
 </template>
 

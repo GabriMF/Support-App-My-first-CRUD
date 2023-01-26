@@ -7,12 +7,8 @@
         <div class="accordion-item">
             <div class="accordion-header" id="issueTemplateHeader">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#issueTextBox" aria-expanded="true" aria-controls="issueTextBox">
-                    <p id="date" class="fs-4">
-                    23/01/23
-                    </p>
-                    <p id="reference" class="ms-3 fw-bold fs-4">
-                    test
-                    </p>
+                    <p id="date" class="fs-4">23/01/23</p>
+                    <p id="reference" class="ms-3 fw-bold fs-4">test</p>
                 </button>
             </div>
 
