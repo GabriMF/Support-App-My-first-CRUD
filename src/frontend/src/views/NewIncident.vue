@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
 import Header from "../components/Header.vue"
 import Footer from "../components/Footer.vue"
+
 window.onload = function formDate() {
   let today = new Date();
 
@@ -17,52 +17,82 @@ window.onload = function formDate() {
   document.getElementById("date").innerHTML = printDate
 };
 
-
-let inputReset = ref("");
-let inputReset2 = ref("");
-let resetTextarea = ref("")
-
 function resetForm() {
-  inputReset.value = "";
-  inputReset2.value = "";
-  resetTextarea.value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("descripcion").value = "";
+  incident.name = "";
+  incident.subject = "";
+  incident.descripcion = "";
 }
 
+let incident = {
+  name: "",
+  subject: "",
+  descripcion: ""
+}
+
+async function save() {
+  if(incident.name=="") {
+    alert("Name is needed");
+    return;
+  }
+
+  if(incident.subject=="") {
+    alert("Subject is needed");
+    return;
+  }
+
+  if(incident.descripcion=="") {
+    alert("Descripcion is needed");
+    return;
+  }
+
+  const payload = JSON.stringify(this.incident);
+  const url = "http://localhost:8080/support-app-myfirstcrud/api/incidents";
+  const r = await fetch(url, {
+    mode: "no-cors",
+    method: "POST",
+    body: payload,
+    headers: {
+      "Content-type": "application/json",
+    }
+  });
+  const response = await r;
+  console.log(response);
+  if (response) {
+    alert("Added " + incident.subject);
+    resetForm();
+  } else {
+    alert("An error has occurred.\nPlease try again after a few minutes.");
+  }
+}
 </script>
 
 <template>
   <Header></Header>
   <main>
-
     <h2>Your new incident</h2>
     <form id="form">
       <label for="date" id="date"></label>
       <div class="form-group">
-
-        <input v-model="inputReset" type="text" class="form-control" id="formGroupExampleInput"
-          placeholder="Enter your name" required>
+        <input v-model="incident.name" type="text" class="form-control" id="name" placeholder="Enter your name"
+          required>
       </div>
       <div class="form-group">
-
-        <input v-model="inputReset2" type="text" class="form-control form-control-lg" id="formGroupExampleInput2"
+        <input v-model="incident.subject" type="text" class="form-control form-control-lg" id="subject"
           placeholder="Write a subject" required>
       </div>
-
-
       <div class="form-group">
-        <textarea v-model="resetTextarea" class="form-control form-control-lg" id="formGroupExampleInput3"
+        <textarea v-model="incident.descripcion" class="form-control form-control-lg" id="descripcion"
           placeholder="Write your commentary" rows="3" required></textarea>
 
       </div>
-
       <div id="buttons-box">
-        <router-link to="/HomeView">
-          <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
-        </router-link>
+        <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
         <button type="button" class="btn btn-warning" id="reset" @click="resetForm()">Reset</button>
-        <button type="button" class="btn btn-success" id="send">Send</button>
+        <button type="button" class="btn btn-success" id="send" @click="save()">Send</button>
       </div>
-
     </form>
   </main>
   <Footer></Footer>
