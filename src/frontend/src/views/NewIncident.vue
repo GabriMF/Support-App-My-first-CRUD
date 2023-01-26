@@ -56,7 +56,9 @@ function resetForm() {
       </div>
 
       <div id="buttons-box">
-        <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+        <router-link to="/HomeView">
+          <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+        </router-link>
         <button type="button" class="btn btn-warning" id="reset" @click="resetForm()">Reset</button>
         <button type="button" class="btn btn-success" id="send">Send</button>
       </div>
