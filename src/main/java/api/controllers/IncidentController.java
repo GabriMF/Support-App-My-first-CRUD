@@ -27,6 +27,7 @@ public class IncidentController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         resp.setContentType("application/json;charset=utf-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
 
         PrintWriter out = resp.getWriter();
 
@@ -48,6 +49,9 @@ public class IncidentController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("application/json;charset=utf-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
+        resp.addHeader("Access-Control-Request-Method", "POST");
+
         PrintWriter out = resp.getWriter();
 
         try {
@@ -65,6 +69,7 @@ public class IncidentController extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("application/json;charset=utf-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
         PrintWriter out = resp.getWriter();
 
         try {
@@ -82,6 +87,8 @@ public class IncidentController extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("application/json;charset=utf-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
+
         PrintWriter out = resp.getWriter();
 
         try {

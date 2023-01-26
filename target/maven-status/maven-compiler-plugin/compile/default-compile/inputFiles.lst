@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\contracts\InterfaceService.java
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\views\View.java
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\services\IncidentService.java
@@ -7,13 +6,3 @@ C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\ap
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\payloads\IncidentPayload.java
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\models\Message.java
 C:\Users\andre\OneDrive\Documentos\F5\Support-App-My-first-CRUD\src\main\java\api\repositories\mysql\MysqlConnexion.java
-=======
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\services\IncidentService.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\models\Incident.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\models\Message.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\controllers\IncidentController.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\contracts\InterfaceService.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\payloads\IncidentPayload.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\views\View.java
-C:\Users\Jhonny\Documents\F5\Support-App-My-first-CRUD\src\main\java\api\repositories\mysql\MysqlConnexion.java
->>>>>>> b2ca69da36cdef704dd1bc7894a463980819ccdd
