@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,9 +78,13 @@ public class Incident {
 
     public IncidentPayload save(IncidentPayload incident) throws SQLException {
 
+        java.util.Date d1 = new java.util.Date();
+        SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        String formattedDate = df.format(d1);
+
         String sql_insert = "INSERT INTO incidences (date, name, subject, descripcion) VALUES (?,?,?,?)";
         PreparedStatement preparedStatement = repository.conn.prepareStatement(sql_insert);
-        preparedStatement.setString(1, incident.getDate());
+        preparedStatement.setString(1, formattedDate);
         preparedStatement.setString(2, incident.getName());
         preparedStatement.setString(3, incident.getSubject());
         preparedStatement.setString(4, incident.getDescripcion());
@@ -100,13 +105,12 @@ public class Incident {
 
     public IncidentPayload updating(IncidentPayload incident) throws SQLException {
 
-        String sql_insert = "UPDATE incidences SET date=?, name=?, subject=?, descripcion=? WHERE id_incidence=?";
+        String sql_insert = "UPDATE incidences SET name=?, subject=?, descripcion=? WHERE id_incidence=?";
         PreparedStatement preparedStatement = repository.conn.prepareStatement(sql_insert);
-        preparedStatement.setString(1, incident.getDate());
-        preparedStatement.setString(2, incident.getName());
-        preparedStatement.setString(3, incident.getSubject());
-        preparedStatement.setString(4, incident.getDescripcion());
-        preparedStatement.setInt(5, incident.getId());
+        preparedStatement.setString(1, incident.getName());
+        preparedStatement.setString(2, incident.getSubject());
+        preparedStatement.setString(3, incident.getDescripcion());
+        preparedStatement.setInt(4, incident.getId());
         preparedStatement.executeUpdate();
         preparedStatement.close();
 
