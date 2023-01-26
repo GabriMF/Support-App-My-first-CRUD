@@ -12,7 +12,7 @@
             <div class="accordion-header" id="issueTemplateHeader">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#issueTextBox" aria-expanded="true" aria-controls="issueTextBox">
                     <p id="date" class="fs-4">23/01/23</p>
-                    <p id="reference" class="ms-3 fw-bold fs-4">test</p>
+                    <p id="reference" class="ms-3 fw-bold fs-4">Incidence Name</p>
                 </button>
             </div>
 
@@ -21,7 +21,7 @@
                     <div id="userName" class="fs-5 fw-bold">
                         Sent by: <p id="userNameInput"></p>
                     </div>
-                    blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In autem voluptates nihil rem reiciendis blanditiis fugiat, asperiores quasi, veritatis ullam recusandae repudiandae eveniet quia sequi fugit? Rem laudantium ipsa aperiam.
                 </div>
                 <div class="d-md-flex justify-content-md-end">
                     <button id="deleteButton" class="rounded border border-0 bg-danger mx-3 my-2 btn btn-lg" @click="deleteButton()">Delete</button>

@@ -1,6 +1,7 @@
 <script setup>
 import Header from "../components/Header.vue"
 import Footer from "../components/Footer.vue"
+import {RouterLink} from "vue-router" 
 
 window.onload = function formDate() {
   let today = new Date();
@@ -89,7 +90,9 @@ async function save() {
 
       </div>
       <div id="buttons-box">
+        <RouterLink to="/HomeView">
         <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+      </RouterLink>
         <button type="button" class="btn btn-warning" id="reset" @click="resetForm()">Reset</button>
         <button type="button" class="btn btn-success" id="send" @click="save()">Send</button>
       </div>

@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from "vue";
+import {RouterLink} from "vue-router";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
 window.onload = function formDate() {
   let today = new Date();
 
@@ -27,6 +31,7 @@ function resetForm() {
 </script>
 
 <template>
+  <Header></Header>
   <main>
 
     <h2>Modify your incident</h2>
@@ -50,15 +55,16 @@ function resetForm() {
       </div>
 
       <div id="buttons-box">
-        <router-link to="/HomeView" id="cancelRouterlink">
-          <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
-        </router-link>
-        <button type="button" class="btn btn-warning" id="reset">Reset</button>
-        <button type="button" class="btn btn-success" id="send">Send</button>
+        <RouterLink to="/HomeView">
+        <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+      </RouterLink>
+        <button type="button" class="btn btn-warning" id="reset" @click="resetForm()">Reset</button>
+        <button type="button" class="btn btn-success" id="send" @click="save()">Send</button>
       </div>
 
     </form>
   </main>
+  <Footer></Footer>
 </template>
 
 <style lang="scss">
