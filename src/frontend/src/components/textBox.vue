@@ -1,4 +1,20 @@
 <script setup>
+
+window.onload = function formDate() {
+  let today = new Date();
+
+  let day = today.getDate();
+  let month = today.getMonth() + 1;
+  let year = today.getFullYear();
+
+  day = ('0' + day).slice(-2);
+  month = ('0' + month).slice(-2);
+
+  let printDate = `${day}/${month}/${year}`
+
+  document.getElementById("date").innerHTML = printDate
+};
+
     function deleteButton(){
         document.getElementById("issueTemplate").remove("issueTemplate");
     }
@@ -11,7 +27,7 @@
         <div class="accordion-item">
             <div class="accordion-header" id="issueTemplateHeader">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#issueTextBox" aria-expanded="true" aria-controls="issueTextBox">
-                    <p id="date" class="fs-4">23/01/23</p>
+                    <p id="date" class="fs-4"></p>
                     <p id="reference" class="ms-3 fw-bold fs-4">Incidence Name</p>
                 </button>
             </div>
