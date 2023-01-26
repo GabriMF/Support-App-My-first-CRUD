@@ -1,22 +1,12 @@
 <script setup>
-
-const props = defineProps ({
- name:{
-   type: String,
-   required: true,
- },
- typeButton:{
-   type: String,
-   default: 'like',
- }
-})
+import {RouterLink} from "vue-router" 
 </script>
 <template>
   <header id="header">
     <h1 id="titleHeader">FACTORÍA F5</h1>
     <div id="twoButtonsHeader">
-    <button type="buttonAllIncidents" id="buttonAll" class="btn text-primary btn-light btn-lg  button">All Incidents</button>
-    <button type="buttonNewIncident" id="buttonNew" class="btn text-primary btn-light btn-lg button">New Incident</button>
+    <button type="buttonAllIncidents" id="buttonAll" class="btn text-primary btn-light btn-lg  button"><RouterLink to="/HomeView">All Incidents</RouterLink></button>
+    <button type="buttonNewIncident" id="buttonNew" class="btn text-primary btn-light btn-lg button"><RouterLink to="/NewIncident">New Incident</RouterLink></button>
   </div>
   </header>
 </template>
